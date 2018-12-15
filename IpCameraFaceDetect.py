@@ -5,7 +5,7 @@ import numpy
 
 findFace = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 while True:
-    data = requests.get(url)
+    data = requests.get(url, verify = False)
     image = data.content
     imageArray = bytearray(image)
     imageID = numpy.array(imageArray)
